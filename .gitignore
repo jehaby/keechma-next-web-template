@@ -5,6 +5,8 @@ public/css/
 .shadow-cljs
 node_modules
 .netlify/
-.clj-kondo/cache/
-.clj-kondo/.cache/
+.clj-kondo/*
+!.clj-kondo/config.edn
 .lsp/sqlite.*.db
+.lsp/.cache
+package-lock.json
