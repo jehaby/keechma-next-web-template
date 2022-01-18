@@ -3,12 +3,16 @@
             [keechma.next.helix.lib :refer [defnc]]
             [helix.core :as hx :refer [$]]
             [helix.dom :as d]
-            [app.ui.pages.home :refer [Home]]))
+            [app.ui.pages.home :refer [Home]]
+            [app.ui.pages.books :refer [Books]]
+            ))
 
 (defnc MainRenderer [props]
   (let [{:keys [page]} (use-sub props :router)]
     (case page
       "home" ($ Home)
-      (d/div "404"))))
+      "books" ($ Books)
+      (d/div "404")
+      )))
 
 (def Main (with-keechma MainRenderer))
